@@ -109,7 +109,7 @@ exports.deleteProduct = async (req,res)=> {
         })
     }
 
-    if(product.productImage && fs.existsSync(product.productImage)) {
+    if(product.productImage) {
         const oldFilePath = product.productImage
         fs.unlinkSync(oldFilePath)
     }
